@@ -1,0 +1,126 @@
+/************** DEFAULT **************/
+.exsoft-button {
+    display: flex;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    color: #232b2b;
+}
+
+/************** HOVER ANIMATIONS **************/
+.exsoft-button--animated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.exsoft-button--animated:active {
+    transform: translateY(0);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+
+/************** VARIANTS **************/
+/* Contained Button */
+.exsoft-button--contained {
+    border: 1px solid transparent; /* Varsayılan olarak transparent */
+}
+
+.exsoft-button--contained.exsoft-button--primary {
+    background-color: #42a5f5;
+    color: inherit;
+    border-color: #42a5f5;
+}
+.exsoft-button--contained.exsoft-button--primary:hover {
+    background-color: #1e88e5;
+}
+
+.exsoft-button--contained.exsoft-button--warning {
+    background-color: #ffc107;
+    color: inherit;
+    border-color: #ffc107;
+}
+.exsoft-button--contained.exsoft-button--warning:hover {
+    background-color: #e6a700;
+}
+
+.exsoft-button--contained.exsoft-button--success {
+    background-color: #66bb6a;
+    color: inherit;
+    border-color: #66bb6a;
+}
+.exsoft-button--contained.exsoft-button--success:hover {
+    background-color: #43a047;
+}
+
+.exsoft-button--contained.exsoft-button--error {
+    background-color: #f44336;
+    color: inherit;
+    border-color: #f44336;
+}
+.exsoft-button--contained.exsoft-button--error:hover {
+    background-color: #d32f2f;
+}
+
+/* Outlined Button */
+.exsoft-button--outlined {
+    background-color: transparent;
+    border: 1px solid;
+}
+.exsoft-button--outlined.exsoft-button--primary {
+    color: #42a5f5;
+    border-color: #42a5f5;
+}
+.exsoft-button--outlined.exsoft-button--primary:hover {
+    background-color: rgba(66, 165, 245, 0.1);
+}
+.exsoft-button--outlined.exsoft-button--warning {
+    color: #ffc107;
+    border-color: #ffc107;
+}
+.exsoft-button--outlined.exsoft-button--warning:hover {
+    background-color: #ffc10718;
+}
+.exsoft-button--outlined.exsoft-button--success {
+    color: #66bb6a;
+    border-color: #66bb6a;
+}
+.exsoft-button--outlined.exsoft-button--success:hover {
+    background-color: #43a04825;
+}
+.exsoft-button--outlined.exsoft-button--error {
+    color: #f44336;
+    border-color: #f44336;
+}
+.exsoft-button--outlined.exsoft-button--error:hover {
+    background-color: #d32f2f21;
+}
+
+/************** SIZES **************/
+.exsoft-button--small {
+    padding: 0.8rem 1.6rem;
+    font-size: 12px;
+}
+.exsoft-button--medium {
+    padding: 1rem 1.5rem;
+    font-size: 14px;
+}
+.exsoft-button--large {
+    padding: 1.1rem 1.7rem;
+    font-size: 16px;
+}
+
+/************** DISABLED **************/
+.exsoft-button--disabled {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
