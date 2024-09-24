@@ -1,2 +1,5 @@
 node_modules
-assets
+dist
+demo-lib
+stories
+.storybook
