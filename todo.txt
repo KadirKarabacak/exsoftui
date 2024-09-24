@@ -4,3 +4,7 @@ $Completed 🟢 || $Not Completed 🟡 || $No way to do 🔴 || $New idea ❔
 [🟡] 1- Control Button component's shadows.
 [🟡] 2- Add IconButton.
 [🟡] 3- Create global CSS variables to save colors - shadows etc.
+
+
+# Do Before Publish 
+1- IconButton icon prop must be required.
