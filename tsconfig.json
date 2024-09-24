@@ -1,13 +1,18 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "esnext",
+        "declaration": true, // Tip dosyaları oluşturulacak
+        "declarationDir": "dist", // Deklarasyonların yazılacağı dizin
+        "outDir": "dist", // Derlenmiş JS dosyalarının yazılacağı dizin
         "jsx": "react",
-        "declaration": true,
-        "outDir": "dist",
-        "strict": true,
+        "moduleResolution": "node",
         "esModuleInterop": true,
-        "moduleResolution": "node"
+        "skipLibCheck": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "module": "esnext", // ESNext kullanarak modül formatı
+        "target": "es5", // ES5 ile geriye dönük uyumluluk
+        "strict": true
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*"], // Tüm kaynak kodları dahil edin
+    "exclude": ["node_modules", "dist"]
 }
