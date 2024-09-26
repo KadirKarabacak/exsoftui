@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line -->
 <p align="center">
-  <a href="https://github.com/KadirKarabacak/exsoftui" rel="noopener" target="_blank"><img width="150" height="133" src="./public//exsoftware-icon.png" alt="Exsoft UI Logo"></a>
+  <a href="https://github.com/KadirKarabacak/exsoftui" rel="noopener" target="_blank"><img width="150" height="133" src="https://imgur.com/a/3e4kZzq" alt="Exsoft UI Logo"></a>
 </p>
 
 <h1 align="center">Exsoft UI</h1>
