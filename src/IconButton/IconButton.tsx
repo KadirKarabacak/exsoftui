@@ -1,6 +1,7 @@
 import React from "react";
 import { clsx } from "../utils/utils";
-import "./index.css";
+import "../styles/tailwind.css";
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
 
 //! Test Cases
 export interface IconButtonProps {
@@ -12,7 +13,6 @@ export interface IconButtonProps {
     disabled?: boolean;
     icon?: React.ReactNode;
     isLoading?: boolean;
-    spinnerColor?: string;
     style?: object;
 }
 
@@ -21,11 +21,10 @@ export const IconButton = ({
     color = "primary",
     size = "medium",
     isLoading = false,
-    spinnerColor,
     className,
     disabled,
     style,
-    icon,
+    icon = <AcademicCapIcon className="h-8 w-8" />,
     ...props
 }: IconButtonProps) => {
     //! Disabled
@@ -34,7 +33,7 @@ export const IconButton = ({
             variant !== "outlined"
                 ? `var(--${color}-color, var(--disabled-color))`
                 : "",
-        opacity: 0.9,
+        opacity: 0.8,
     });
 
     const buttonClass = clsx(
