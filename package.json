@@ -1,6 +1,6 @@
 {
     "name": "exsoftui",
-    "version": "1.0.24",
+    "version": "1.0.27",
     "main": "./dist/index.js",
     "module": "./dist/index.esm.js",
     "types": "./dist/index.d.ts",
@@ -43,6 +43,7 @@
         }
     },
     "dependencies": {
+        "@heroicons/react": "^2.1.5",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     },
