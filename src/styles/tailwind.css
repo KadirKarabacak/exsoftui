@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*** BUTTON ***/
 .exsoft-button {
     display: flex;
     align-items: center;
@@ -11,7 +12,7 @@
     cursor: pointer;
     border: 0;
     border-radius: 5px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1;
     font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 1rem 2rem;
@@ -21,7 +22,6 @@
     color: var(--default-text-color);
     letter-spacing: 0.02857em;
 }
-
 .exsoft-button--animated:hover {
     transform: translateY(-2px);
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,6 @@
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.1s ease;
 }
-
 .exsoft-button--contained.exsoft-button--primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -40,7 +39,6 @@
 .exsoft-button--contained.exsoft-button--primary:hover {
     background-color: var(--primary-color-hover);
 }
-
 .exsoft-button--contained.exsoft-button--warning {
     background-color: var(--warning-color);
     border-color: var(--warning-color);
@@ -48,7 +46,6 @@
 .exsoft-button--contained.exsoft-button--warning:hover {
     background-color: var(--warning-color-hover);
 }
-
 .exsoft-button--contained.exsoft-button--success {
     background-color: var(--success-color);
     border-color: var(--success-color);
@@ -56,7 +53,6 @@
 .exsoft-button--contained.exsoft-button--success:hover {
     background-color: var(--success-color-hover);
 }
-
 .exsoft-button--contained.exsoft-button--error {
     background-color: var(--error-color);
     border-color: var(--error-color);
@@ -64,44 +60,42 @@
 .exsoft-button--contained.exsoft-button--error:hover {
     background-color: var(--error-color-hover);
 }
-
 .exsoft-button--outlined {
     background-color: transparent;
     border: 1px solid;
 }
-
 .exsoft-button--outlined.exsoft-button--primary {
-    color: var(--default-text-color);
-    border-color: var(--primary-color);
+    color: var(--primary-color);
+    border-color: var(--variant-outlined-border-primary);
 }
 .exsoft-button--outlined.exsoft-button--primary:hover {
     background-color: rgba(66, 165, 245, 0.2);
+    border-color: var(--primary-color);
 }
-
 .exsoft-button--outlined.exsoft-button--warning {
-    color: var(--default-text-color);
-    border-color: var(--warning-color);
+    color: var(--warning-color);
+    border-color: var(--variant-outlined-border-warning);
 }
 .exsoft-button--outlined.exsoft-button--warning:hover {
     background-color: rgba(255, 193, 7, 0.2);
+    border-color: var(--warning-color);
 }
-
 .exsoft-button--outlined.exsoft-button--success {
-    color: var(--default-text-color);
-    border-color: var(--success-color);
+    color: var(--success-color);
+    border-color: var(--variant-outlined-border-success);
 }
 .exsoft-button--outlined.exsoft-button--success:hover {
     background-color: rgba(102, 187, 106, 0.2);
+    border-color: var(--success-color);
 }
-
 .exsoft-button--outlined.exsoft-button--error {
-    color: var(--default-text-color);
-    border-color: var(--error-color);
+    color: var(--error-color);
+    border-color: var(--variant-outlined-border-error);
 }
 .exsoft-button--outlined.exsoft-button--error:hover {
     background-color: rgba(244, 67, 54, 0.2);
+    border-color: var(--error-color);
 }
-
 .exsoft-button--small {
     padding: 0.8rem 1.6rem;
     font-size: 12px;
@@ -114,21 +108,9 @@
     padding: 1.1rem 1.7rem;
     font-size: 16px;
 }
-
-.exsoft-button--text-small {
-    font-size: 12px;
-}
-.exsoft-button--text-medium {
-    font-size: 14px;
-}
-.exsoft-button--text-large {
-    font-size: 16px;
-}
-
 .exsoft-button--fullWidth {
     width: 100%;
 }
-
 .exsoft-button--loading {
     cursor: wait;
     opacity: 0.8;
@@ -136,29 +118,144 @@
 .exsoft-button--loading:hover {
     transform: translate(0);
 }
-
-.loading-spinner {
-    border: 3px solid var(--spinner-border-color);
-    border-radius: 50%;
-    border-top: 3px solid var(--loading-spinner-color);
-    width: 18px;
-    height: 18px;
-    animation: spin-with-trail 1s linear infinite;
-}
-
 .exsoft-button--disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+    transition: background-color 0.3s ease;
+}
+.exsoft-button--disabled:hover {
+    transform: translate(0);
+    box-shadow: unset;
+    background-color: unset;
+}
+.exsoft-button--disabled.exsoft-button--outlined:hover {
+    background-color: transparent;
+    border-color: unset;
+}
+.exsoft-button--rounded-small {
+    border-radius: 2px;
+}
+.exsoft-button--rounded-medium {
+    border-radius: 5px;
+}
+.exsoft-button--rounded-large {
+    border-radius: 15px;
+}
+/*** ICON BUTTON ***/
+.exsoft-icon-button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 9999px;
+    padding: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-text-color);
+}
+.exsoft-icon-button--animated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.exsoft-icon-button--animated:active {
+    transform: translateY(0);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+.exsoft-icon-button--contained.exsoft-icon-button--primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--primary:hover {
+    background-color: var(--primary-color-hover);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--warning:hover {
+    background-color: var(--warning-color-hover);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--success:hover {
+    background-color: var(--success-color-hover);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--error {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--error:hover {
+    background-color: var(--error-color-hover);
+}
+.exsoft-icon-button--outlined {
+    background-color: transparent;
+    border: 1px double;
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--primary {
+    color: var(--default-text-color);
+    border-color: var(--primary-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--primary:hover {
+    background-color: rgba(66, 165, 245, 0.4);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--warning {
+    color: var(--default-text-color);
+    border-color: var(--warning-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--warning:hover {
+    background-color: rgba(255, 193, 7, 0.4);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--success {
+    color: var(--default-text-color);
+    border-color: var(--success-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--success:hover {
+    background-color: rgba(102, 187, 106, 0.4);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--error {
+    color: var(--default-text-color);
+    border-color: var(--error-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--error:hover {
+    background-color: rgba(244, 67, 54, 0.4);
+}
+.exsoft-icon-button--small {
+    padding: 0.6rem;
+}
+.exsoft-icon-button--medium {
+    padding: 0.8rem;
+}
+.exsoft-icon-button--large {
+    padding: 1rem;
+}
+.exsoft-icon-button--disabled {
     background-color: var(--disabled-color);
     color: var(--disabled-text-color);
     box-shadow: none;
     cursor: not-allowed;
     transition: background-color 0.3s ease;
 }
-
-.exsoft-button--disabled:hover {
+.exsoft-icon-button--disabled:hover {
     transform: translate(0);
     box-shadow: unset;
 }
 
+/*** SAME FOR ALL  ***/
+.loading-spinner {
+    border: 0.2em solid var(--spinner-border-color);
+    border-radius: 50%;
+    border-top: 0.2em solid var(--loading-spinner-color);
+    width: 1.2em;
+    height: 1.2em;
+    animation: spin-with-trail 1s linear infinite;
+}
+
+/*** KEYFRAMES ***/
 @keyframes spin-with-trail {
     0% {
         transform: rotate(0deg);
