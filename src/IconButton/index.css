@@ -1,0 +1,138 @@
+@import "../styles/tailwind.css";
+
+.exsoft-icon-button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 9999px;
+    padding: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-text-color);
+}
+
+.exsoft-icon-button--animated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.exsoft-icon-button--animated:active {
+    transform: translateY(0);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+
+.exsoft-icon-button--contained.exsoft-icon-button--primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.exsoft-icon-button--contained.exsoft-icon-button--warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--warning:hover {
+    background-color: var(--warning-color-hover);
+}
+
+.exsoft-icon-button--contained.exsoft-icon-button--success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--success:hover {
+    background-color: var(--success-color-hover);
+}
+
+.exsoft-icon-button--contained.exsoft-icon-button--error {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+}
+.exsoft-icon-button--contained.exsoft-icon-button--error:hover {
+    background-color: var(--error-color-hover);
+}
+
+.exsoft-icon-button--outlined {
+    background-color: transparent;
+    border: 1px double;
+}
+
+.exsoft-icon-button--outlined.exsoft-icon-button--primary {
+    color: var(--default-text-color);
+    border-color: var(--primary-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--primary:hover {
+    background-color: rgba(66, 165, 245, 0.4);
+}
+
+.exsoft-icon-button--outlined.exsoft-icon-button--warning {
+    color: var(--default-text-color);
+    border-color: var(--warning-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--warning:hover {
+    background-color: rgba(255, 193, 7, 0.4);
+}
+
+.exsoft-icon-button--outlined.exsoft-icon-button--success {
+    color: var(--default-text-color);
+    border-color: var(--success-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--success:hover {
+    background-color: rgba(102, 187, 106, 0.4);
+}
+
+.exsoft-icon-button--outlined.exsoft-icon-button--error {
+    color: var(--default-text-color);
+    border-color: var(--error-color);
+}
+.exsoft-icon-button--outlined.exsoft-icon-button--error:hover {
+    background-color: rgba(244, 67, 54, 0.4);
+}
+
+.exsoft-icon-button--small {
+    padding: 0.6rem;
+}
+.exsoft-icon-button--medium {
+    padding: 0.8rem;
+}
+.exsoft-icon-button--large {
+    padding: 1rem;
+}
+
+.exsoft-icon-button--disabled {
+    background-color: var(--disabled-color);
+    color: var(--disabled-text-color);
+    box-shadow: none;
+    cursor: not-allowed;
+    transition: background-color 0.3s ease;
+}
+
+.exsoft-icon-button--disabled:hover {
+    transform: translate(0);
+    box-shadow: unset;
+}
+
+.loading-spinner {
+    border: 3px solid var(--spinner-border-color);
+    border-radius: 50%;
+    border-top: 3px solid var(--loading-spinner-color);
+    width: 18px;
+    height: 18px;
+    animation: spin-with-trail 1s linear infinite;
+}
+
+@keyframes spin-with-trail {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(80deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
