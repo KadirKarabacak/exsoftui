@@ -1,10 +1,11 @@
-$Completed 🟢 || $Not Completed 🟡 || $No way to do 🔴 || $New idea ❔
+$Completed 🟢 || $Not Completed 🟡 || $No way to do 🔴 || $New idea ❔ || $Fix 🔍
 
 # Missions to do :
 [🟡] 1- Control Button component's shadows.
 [🟡] 2- Add IconButton.
 [🟡] 3- Create global CSS variables to save colors - shadows etc.
-
+[🔍] 4- Fix "spinnerColor" prop. It doesn't works.
+[🔍] 5- Fix css classes. Include all of them into src/styles/tailwind.css on build.
 
 # Do Before Publish 
 1- IconButton icon prop must be required.
