@@ -1,8 +1,9 @@
 {
     "name": "exsoftui",
-    "version": "1.0.15",
-    "module": "./index.js",
-    "types": "./index.d.ts",
+    "version": "1.0.24",
+    "main": "./dist/index.js",
+    "module": "./dist/index.esm.js",
+    "types": "./dist/index.d.ts",
     "license": "MIT",
     "files": [
         "dist/",
@@ -12,6 +13,9 @@
         "access": "public",
         "directory": "dist"
     },
+    "engines": {
+        "node": ">=14.0.0"
+    },
     "scripts": {
         "build": "rollup -c",
         "storybook": "storybook dev -p 6006",
@@ -19,7 +23,7 @@
     },
     "exports": {
         ".": {
-            "import": "./dist/index.js",
+            "import": "./dist/index.esm.js",
             "default": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
@@ -33,27 +37,32 @@
             "default": "./dist/IconButton/index.js",
             "types": "./dist/IconButton/index.d.ts"
         },
-        "./styles": {
-            "import": "./dist/styles/globals/variables.css",
-            "default": "./dist/styles/globals/variables.css"
+        "./styles/tailwind.css": {
+            "import": "./dist/styles/tailwind.css",
+            "default": "./dist/styles/tailwind.css"
         }
     },
     "dependencies": {
-        "@storybook/react": "^8.3.2",
-        "@storybook/test": "^8.3.2",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "rollup-plugin-postcss": "^4.0.2",
-        "rollup-plugin-typescript2": "^0.36.0"
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^26.0.1",
         "@rollup/plugin-node-resolve": "^15.2.3",
+        "@storybook/addon-essentials": "^8.3.3",
+        "@storybook/addon-interactions": "^8.3.3",
+        "@storybook/addon-links": "^8.3.3",
+        "@storybook/addon-onboarding": "^8.3.3",
+        "@storybook/react": "^8.3.3",
+        "@storybook/react-vite": "^8.3.3",
+        "@storybook/test": "^8.3.3",
         "@types/react": "^18.3.8",
         "autoprefixer": "^10.4.20",
         "postcss": "^8.4.47",
         "rollup": "^3.29.5",
         "rollup-plugin-copy": "^3.5.0",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-typescript2": "^0.36.0",
         "tailwindcss": "^3.4.13",
         "typescript": "^5.6.2"
     }
