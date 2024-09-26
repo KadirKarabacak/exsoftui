@@ -9,6 +9,19 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        backgrounds: {
+            default: "dark",
+            values: [
+                {
+                    name: "dark",
+                    value: "#333333", // Koyu arka plan rengi
+                },
+                {
+                    name: "light",
+                    value: "#ffffff", // Açık arka plan rengi (isteğe bağlı)
+                },
+            ],
+        },
     },
 };
 
