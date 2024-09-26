@@ -1,6 +1,7 @@
 import React from "react";
 import { clsx } from "../utils/utils";
-import "./index.css";
+// import "./index.css";
+import "../styles/tailwind.css";
 // import { BeakerIcon } from "@heroicons/react/24/solid";
 
 //! Test Cases
@@ -9,18 +10,18 @@ export interface ButtonProps {
     variant?: "outlined" | "contained";
     color?: "primary" | "warning" | "success" | "error";
     size?: "small" | "medium" | "large";
+    rounded?: "small" | "medium" | "large";
     label: string;
     onClick?: () => void;
     className?: string;
     disabled?: boolean;
     endIcon?: React.ReactNode;
     animated?: boolean;
-    textSize?: "small" | "medium" | "large";
     fullWidth?: boolean;
     isLoading?: boolean;
     loadingText?: string;
-    spinnerColor?: string;
     style?: object;
+    shouldDisplaySpinner?: boolean;
 }
 
 /** Primary UI component for user interaction */
@@ -29,11 +30,11 @@ export const Button = ({
     color = "primary",
     size = "medium",
     animated = true,
-    textSize = "medium",
     fullWidth = false,
     isLoading = false,
     loadingText = "Loading...",
-    spinnerColor,
+    shouldDisplaySpinner = true,
+    rounded,
     label,
     className,
     disabled,
@@ -44,11 +45,8 @@ export const Button = ({
 }: ButtonProps) => {
     //! Disabled
     const getDisabledStyles = (color: string) => ({
-        backgroundColor:
-            variant !== "outlined"
-                ? `var(--${color}-color, var(--disabled-color))`
-                : "",
-        opacity: 0.8,
+        backgroundColor: variant !== "outlined" ? `var(--${color}-color)` : "",
+        opacity: 0.6,
     });
 
     const buttonClass = clsx(
@@ -56,24 +54,17 @@ export const Button = ({
         `exsoft-button--${size}`,
         `exsoft-button--${variant}`,
         `exsoft-button--${color}`,
-        `exsoft-button--text-${textSize}`,
         disabled && "exsoft-button--disabled",
         endIcon && "gap-2 items-center",
         animated && "exsoft-button--animated",
         fullWidth && "exsoft-button--fullWidth",
         isLoading && "exsoft-button--loading",
+        rounded && `exsoft-button--rounded-${rounded}`,
         className
     );
 
-    // `exsoft-button exsoft-button--${size} exsoft-button--${variant} exsoft-button--${color} exsoft-button--text-${textSize} ${
-    //     disabled && "exsoft-button--disabled"
-    // } ${endIcon && "gap-2 items-center"} ${
-    //     animated && "exsoft-button--animated"
-    // } ${fullWidth && "exsoft-button--fullWidth"} ${
-    //     isLoading && "exsoft-button--loading"
-    // } ${className}`
-
     const spinnerStyles = {
+        display: !shouldDisplaySpinner ? "none" : "block",
         borderColor:
             variant === "outlined"
                 ? "var(--loading-spinner-color)"
