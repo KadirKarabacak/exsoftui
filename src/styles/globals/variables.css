@@ -1,16 +1,32 @@
 :root {
-    --primary-color: #42a5f5;
+    /* Primary */
+    --primary-color: #90caf9;
     --primary-color-hover: #1e88e5;
+    --variant-outlined-border-primary: rgba(144, 202, 249, 0.5);
+
+    /* Warning */
     --warning-color: #ffc107;
     --warning-color-hover: #e6a700;
+    --variant-outlined-border-warning: rgba(255, 193, 7, 0.5);
+
+    /* Success */
     --success-color: #66bb6a;
     --success-color-hover: #388e3c;
+    --variant-outlined-border-success: rgba(102, 187, 106, 0.5);
+
+    /* Error */
     --error-color: #f44336;
     --error-color-hover: #d32f2f;
+    --variant-outlined-border-error: rgba(244, 67, 54, 0.5);
+
+    /* Disabled */
     --disabled-color: rgba(255, 255, 255, 0.3);
     --disabled-text-color: #373838;
-    --loading-spinner-color: rgba(0, 0, 0, 0.87);
+
     --default-text-color: rgba(0, 0, 0, 0.87);
+
+    /* Spinner */
+    --loading-spinner-color: rgba(0, 0, 0, 0.8);
     --spinner-border-color: rgba(255, 255, 255, 0.3);
     --spinner-border-color-2: rgba(255, 255, 255, 0.6);
 }
